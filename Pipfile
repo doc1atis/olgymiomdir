@@ -7,6 +7,10 @@ verify_ssl = true
 
 [packages]
 django-rest-knox = "*"
-
+argon2-cffi="20.1.0"
+bcrypt="3.1.7"
+boto3="1.14.28"
+Django="3.0.8"
+django-storages="1.9.1"
 [requires]
 python_version = "3.8"
