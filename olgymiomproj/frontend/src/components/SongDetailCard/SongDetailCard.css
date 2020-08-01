@@ -1,0 +1,69 @@
+.song-detail-root {
+  /* background-color: rgb(26, 26, 26); */
+  display: flex;
+  height: 14vh;
+  min-height: 115px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  /* border-bottom: 1px solid rgb(78, 87, 78); */
+  margin-bottom: 20px;
+}
+.song-cover {
+  /* background-color: chartreuse; */
+  background-image: url("https://image.shutterstock.com/image-photo/mountain-valley-during-sunrise-natural-600w-429691771.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  width: 35%;
+}
+.song-stats-holder {
+  /* background-color: dimgray; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 65%;
+}
+.song-stats-top {
+  /* background-color: chocolate; */
+  display: flex;
+  justify-content: space-around;
+  /* height: 60%; */
+  padding-top: 5px;
+}
+.song-stats-top span {
+  color: turquoise;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.stats-number-detail {
+  color: thistle;
+  font-family: "Slabo 27px", serif;
+}
+.song-stats-bottom {
+  /* background-color: cornflowerblue; */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* height: 30%; */
+  padding-left: 5px;
+}
+.song-stats-title {
+  /* background-color: darkorchid; */
+  width: 75%;
+  color: rgb(201, 237, 237);
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-family: "Slabo 27px", serif;
+  padding-left: 3px;
+  margin-top: 10px;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.song-detail-dots {
+  color: cyan;
+  font-size: 1.3rem;
+}

@@ -1,0 +1,58 @@
+.player-page-section1 {
+  /* background-color: lightcoral; */
+  height: 55vh;
+  position: fixed;
+  top: 150px;
+}
+
+.player-contents-holder {
+  /* background-color: lightgreen; */
+  height: 100%;
+}
+.player-visual-holder {
+  background-color: lightskyblue;
+  background-image: url("https://image.shutterstock.com/image-photo/beautiful-water-drop-on-dandelion-600w-789676552.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 45%;
+}
+.song-title-and-artist-holder {
+  background-color: rgb(19, 22, 23);
+  height: 10%;
+  display: flex;
+  align-items: center;
+}
+.song-title-and-artist-holder h5 {
+  /* background-color: red; */
+  color: rgb(201, 237, 237);
+  padding-left: 10px;
+  width: 100%;
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-family: "Slabo 27px", serif;
+  -webkit-line-clamp: 2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.player-control-holder {
+  background-color: rgb(34, 33, 34);
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 25%;
+  padding-right: 10px;
+}
+.player-contents-holder span {
+  color: rgb(111, 120, 116);
+  font-size: 1.6rem;
+}
+.player-stats-holder {
+  background-color: orange;
+  height: 15%;
+}
+.player-description-holder {
+  background-color: rgb(45, 42, 42);
+  height: 20%;
+}
