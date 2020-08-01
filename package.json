@@ -1,0 +1,48 @@
+{
+  "name": "olgymiomdir",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development --watch ./olgymiomproj/frontend/src/index.js --output ./olgymiomproj/frontend/static/main.js",
+    "build": "webpack --mode production ./olgymiomproj/frontend/src/index.js --output ./olgymiomproj/frontend/static/main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/doc1atis/olgymiomdir.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.0",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
+    "css-loader": "^4.2.0",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.0",
+    "axios": "^0.19.2",
+    "babel-preset-react": "^6.24.1",
+    "prop-types": "^15.7.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.1",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/doc1atis/olgymiomdir/issues"
+  },
+  "homepage": "https://github.com/doc1atis/olgymiomdir#readme"
+}
