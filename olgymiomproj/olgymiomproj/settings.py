@@ -121,7 +121,8 @@ AWS_DEFAULT_ACL = 'public-read'
 AWS_S3_OBJECT_PARAMETERS = {
     'CacheControl': 'max-age=86400',
 }
-STATIC_URL = "/static/"
+if APP_PHASE == "dev":
+    STATIC_URL = "/static/"
 if APP_PHASE == "production":
     AWS_LOCATION = 'static'
     STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{AWS_LOCATION}/'
