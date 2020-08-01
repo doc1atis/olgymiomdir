@@ -9,6 +9,9 @@ export default class NavBar extends Component {
           <i className="fab fa-mix"></i>iom
         </a>
         <SearchBar />
+        <div id="nav-right-side">
+          <button>Login</button>
+        </div>
       </div>
     );
   }
