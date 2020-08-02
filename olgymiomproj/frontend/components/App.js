@@ -2,11 +2,13 @@ import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import "./App.css";
 import NavBar from "../components/NavBar/NavBar";
+import RegisterForm from "../components/RegisterForm/Register";
 export default class App extends Component {
   render() {
     return (
       <div id="root-container">
         <NavBar />
+        <RegisterForm />
       </div>
     );
   }

@@ -7,7 +7,7 @@ export default class NavBar extends Component {
     return (
       <div id="navbar" className="navbar">
         <a href="/" className="brand-word">
-          <i className="fab fa-mix"></i>iom
+          <i className="fab fa-mix"></i>
         </a>
         <SearchBar />
         <NavRight />
