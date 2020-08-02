@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./NavBar.css";
 import SearchBar from "../SearchBar/SearchBar";
+import NavRight from "../NavRight/NavRight";
 export default class NavBar extends Component {
   render() {
     return (
@@ -9,9 +10,7 @@ export default class NavBar extends Component {
           <i className="fab fa-mix"></i>iom
         </a>
         <SearchBar />
-        <div id="nav-right-side">
-          <button>Login</button>
-        </div>
+        <NavRight />
       </div>
     );
   }

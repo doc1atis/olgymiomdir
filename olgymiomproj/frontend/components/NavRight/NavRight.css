@@ -1,0 +1,16 @@
+#nav-right-side {
+  /* background-color: brown; */
+}
+#navbar-loggin-button {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid rgb(18, 16, 16);
+  background-color: rgb(234, 250, 124);
+  color: black;
+  margin-right: 10px;
+  cursor: pointer;
+}
