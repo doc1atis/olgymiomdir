@@ -16,6 +16,7 @@ export function loadSong(songUrl) {
     payload: {
       songUrl,
       loaded: true,
+      play: true,
     },
   };
 }
