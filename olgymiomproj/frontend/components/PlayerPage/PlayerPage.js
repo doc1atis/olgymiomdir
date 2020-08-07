@@ -5,16 +5,18 @@ import {
   songIsPlaying,
   songIsPaused,
   songHasEnded,
+  playSong,
 } from "../../redux/actions/actionsOnSongs";
 import PlayerControls from "../PlayerControls/PlayerControls";
 class PlayerPage extends Component {
   position = 0;
   timerId = null;
   componentWillUnmount() {
-    // destroy the sound when user switch page
-    // this.player.howler.unload();
+    // destroy the sound when user switch page or refresh page
+    this.player.howler.unload();
   }
   componentDidMount() {
+    this.props.playSong();
     this.slider = document.getElementById("song-range");
     this.player.howler.once("load", () => {
       // set the slider max range once the sound is loaded
@@ -29,9 +31,12 @@ class PlayerPage extends Component {
       }, 0.1 * 1000);
     });
     this.player.howler.on("pause", () => {
+      console.log("song pause");
       clearInterval(this.timerId);
     });
+    // physical touch input only, not programatic input
     this.slider.oninput = (e) => {
+      console.log("inputed olgy via program");
       // position the song where you want
       this.player.seek(e.target.value);
       // clear the previoous timer(stop slider)
@@ -46,12 +51,11 @@ class PlayerPage extends Component {
         this.slider.value = this.position;
         this.position += 0.1;
       }, 0.1 * 1000);
-      if (!this.props.isPlaying || this.props.isPaused) {
+      if (!this.props.isPlaying) {
         clearInterval(this.timerId);
       }
     };
   }
-
   startPlaying = (id) => {
     //  dispatch action to know when song start playing
     this.soundId = id;
@@ -72,6 +76,9 @@ class PlayerPage extends Component {
     this.slider.value = this.player.seek();
     clearInterval(this.timerId);
     this.player.play();
+    if (!this.props.isPlaying) {
+      console.log("okey");
+    }
   };
   seekerForward = () => {
     this.player.seek(this.player.howler.duration(this.soundId));
@@ -110,11 +117,11 @@ const mapStateToProps = (state) => {
     songUrl: state.songsReducer.songUrl,
     loaded: state.songsReducer.loaded,
     isPlaying: state.songsReducer.isPlaying,
-    isPaused: state.songsReducer.isPaused,
   };
 };
 export default connect(mapStateToProps, {
   songIsPlaying,
   songIsPaused,
   songHasEnded,
+  playSong,
 })(PlayerPage);

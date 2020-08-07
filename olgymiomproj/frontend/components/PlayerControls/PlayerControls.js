@@ -25,9 +25,9 @@ class PlayerControls extends Component {
           >
             <i className="fas fa-step-backward"></i>
           </span>
-          {!this.props.isPlaying && !this.props.isPaused ? (
+          {this.props.play && !this.props.isPlaying ? (
             "spinner"
-          ) : this.props.isPaused ? (
+          ) : !this.props.play ? (
             <span onClick={this.props.playSong} className="control-button">
               <i className="fas fa-play-circle"></i>
             </span>
@@ -49,8 +49,8 @@ class PlayerControls extends Component {
 }
 const mapStateToProps = (state) => {
   return {
+    play: state.songsReducer.play,
     isPlaying: state.songsReducer.isPlaying,
-    isPaused: state.songsReducer.isPaused,
   };
 };
 export default connect(mapStateToProps, { playSong, pauseSong })(

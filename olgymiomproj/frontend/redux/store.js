@@ -7,7 +7,7 @@ const initialState = {
     songUrl: "https://olgybucket.s3.amazonaws.com/media/sale.mp3",
     loaded: true,
     play: false,
-    isPaused: true,
+    isPlaying: false,
   },
 };
 const middleware = [thunk];
