@@ -1,0 +1,9 @@
+#player-cover {
+  background-image: url("https://images.pexels.com/photos/4545787/pexels-photo-4545787.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 60vh;
+  max-height: 600px;
+  min-height: 300px;
+}

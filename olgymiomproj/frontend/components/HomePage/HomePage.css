@@ -1,0 +1,9 @@
+#landing-pic {
+  width: 100%;
+  height: 60vh;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("http://127.0.0.1:8000/static/963d341f2c14cd75373a426642ff6bf9.jpg");
+  background-size: cover;
+  background-position: center;
+}

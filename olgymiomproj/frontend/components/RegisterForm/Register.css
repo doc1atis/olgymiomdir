@@ -4,7 +4,6 @@
   max-height: 350px;
   background-color: rgb(20, 23, 31);
   max-width: 500px;
-  min-width: 300px;
   margin-left: auto;
   margin-right: auto;
   margin-top: 100px;
@@ -18,7 +17,7 @@
   padding-top: 30px;
   padding-bottom: 30px;
 }
-@media (min-width: 375px) {
+@media (min-width: 300px) {
   #register-form {
     width: 90%;
   }
