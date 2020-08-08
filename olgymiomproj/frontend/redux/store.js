@@ -5,7 +5,7 @@ import allReducers from "./reducers/allReducers";
 const initialState = {
   songsReducer: {
     songUrl: "https://olgybucket.s3.amazonaws.com/media/sale.mp3",
-    loaded: true,
+    loaded: false,
     play: false,
     isPlaying: false,
   },

@@ -5,7 +5,6 @@ import {
   songIsPlaying,
   songIsPaused,
   songHasEnded,
-  playSong,
 } from "../../redux/actions/actionsOnSongs";
 import PlayerControls from "../PlayerControls/PlayerControls";
 class PlayerPage extends Component {
@@ -16,7 +15,6 @@ class PlayerPage extends Component {
     this.player.howler.unload();
   }
   componentDidMount() {
-    this.props.playSong();
     this.slider = document.getElementById("song-range");
     this.player.howler.once("load", () => {
       // set the slider max range once the sound is loaded
@@ -75,9 +73,8 @@ class PlayerPage extends Component {
     this.player.seek(0);
     this.slider.value = this.player.seek();
     clearInterval(this.timerId);
-    this.player.play();
     if (!this.props.isPlaying) {
-      console.log("okey");
+      this.player.play();
     }
   };
   seekerForward = () => {
@@ -123,5 +120,4 @@ export default connect(mapStateToProps, {
   songIsPlaying,
   songIsPaused,
   songHasEnded,
-  playSong,
 })(PlayerPage);

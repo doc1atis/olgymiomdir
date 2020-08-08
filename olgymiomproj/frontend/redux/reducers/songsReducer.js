@@ -19,6 +19,7 @@ export default function (state = INITIAL_STATE, action) {
         ...state,
         loaded: action.payload.loaded,
         songUrl: action.payload.songUrl,
+        play: action.payload.play,
       };
     case PLAY_SONG:
       return { ...state, play: action.payload.play };
